@@ -1,6 +1,8 @@
 # Enhancing Temporal Knowledge Graph Completion via Historical-Future Subgraphs and Time-Span Sensitivity
 
-**requirements**
+## Requirements
+
+To set up the environment, run the following commands:
 
 ```bash
 conda create -n THOR python=3.8
@@ -10,7 +12,9 @@ pip install tqdm
 pip install seaborn
 ```
 
-**data_process**
+## Data Processing
+
+Preprocess the dataset (e.g., ICEWS14) with the following commands:
 
 ```bash
 cd data
@@ -19,18 +23,28 @@ python construct_graph.py --dataset ICEWS14 --window_size 12
 python construct_relation_graph.py --dataset ICEWS14 --window_size 12
 ```
 
-**train**
+## Training
 
-ICEWS14
+### ICEWS14
+
+Train the model on the ICEWS14 dataset:
 
 ```bash
 python ./train.py --dataset ICEWS14 --window_size 12 --device cuda:0 --aT_ratio 0.85 --rel_ratio 0.2
 ```
 
-YAGP11k
+### YAGO11k
+
+Train the model on the YAGO11k dataset:
 
 ```bash
 python ./train.py --dataset YAGO11k --window_size 11 --device cuda:0 --aT_ratio 0.8 --rel_ratio 0.05
 ```
 
-*In order to increase readability, the project code has been refactored. If the program cannot run, please try using the original version in the backup directory.*
+## Testing
+
+We provide a pre-trained model for the ICEWS14 dataset. To evaluate it, run:
+
+```bash
+python ./test.py --model_path ./data/model/saved_ICEWS14.pth
+```
