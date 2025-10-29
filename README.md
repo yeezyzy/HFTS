@@ -1,4 +1,4 @@
-# Enhancing Temporal Knowledge Graph Completion via Historical-Future Subgraphs and Time-Span Sensitivity
+# HFTS: Time-Span-Aware Historical–Future Modeling for Temporal Knowledge Graph Completion
 
 ## Prerequisites
 
