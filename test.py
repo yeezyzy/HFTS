@@ -146,4 +146,4 @@ with torch.no_grad():
         r_object_filtered_data_ranks.append(r_object_filtered_rank)
         r_subject_filtered_data_ranks.append(r_subject_filtered_rank)
     MRR, h1, h3, h10, result = print_metrics_single(r_object_filtered_data_ranks, r_subject_filtered_data_ranks)
-    print("test result\nMRR:", MRR, "\nHits@1:", h1, "\nHits@3:", h3, "\nHits@10:", h10, "\nat epoch:", epoch)
+    print("test result\nMRR:", MRR, "\nHits@1:", h1, "\nHits@3:", h3, "\nHits@10:", h10, "\n")
