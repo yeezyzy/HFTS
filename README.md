@@ -1,5 +1,13 @@
 # Enhancing Temporal Knowledge Graph Completion via Historical-Future Subgraphs and Time-Span Sensitivity
 
+## Prerequisites
+
+Before cloning the repository, ensure you have [Git LFS](https://git-lfs.com/) installed. Use the following command to clone the repository with all its contents:
+
+```bash
+git lfs clone <repository-url>
+```
+
 ## Requirements
 
 To set up the environment, run the following commands:
@@ -41,7 +49,8 @@ Train the model on the YAGO11k dataset:
 python ./train.py --dataset YAGO11k --window_size 11 --device cuda:0 --aT_ratio 0.8 --rel_ratio 0.05
 ```
 
-## Testing
+## pre-trained
+> You can download the pre-trained models from [Hugging Face](https://huggingface.co/moyeezy/HFTS/tree/main).
 
 We provide a pre-trained model for the ICEWS14 dataset. To evaluate it, run:
 
